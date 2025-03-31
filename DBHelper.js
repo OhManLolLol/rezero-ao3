@@ -76,7 +76,7 @@ async function getAo3Feed() {
 async function updateFeed(guildId, feed) {
   const data = await getGuildData(guildId);
 
-  if (typeof (feed) !== undefined) {
+  if (feed != undefined) {
     data.lastFeed = feed;
   }
 

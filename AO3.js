@@ -1,7 +1,5 @@
 const scraper = require('ao3scraper');
 const { SlashCommandBuilder, EmbedBuilder, underscore } = require('discord.js');
-const Database = require("@replit/database");
-const db = new Database();
 const { IsDBEmpty, getAo3Feed, getGuildData, updateFeed } = require("./DBHelper.js");
 
 function IsAO3Work(link) {
@@ -167,7 +165,7 @@ async function CheckFanfics(guildId) {
     console.log(oldRSS, RSS);
     */
 
-    if (oldRSS === null || RSS === null) {
+    if (oldRSS == null || RSS == null) {
       return [[], []];
     }
 
