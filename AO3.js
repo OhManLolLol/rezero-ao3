@@ -29,16 +29,16 @@ function FicPassesFilter(ficInfo) {
   const bannedWarnings = [ "Rape/Non-Con", "Underage Sex" ]
 
   if (fandoms.length > 4) {
-    return false
+    return false;
   }
 
   for (let warning of bannedWarnings) {
     if (ficInfo.warnings.find((value) => value == warning)) {
-      return false
+      return false;
     }
   }
 
-  return true
+  return true;
 }
 
 function IsReZeroWork(link) {
