@@ -54,14 +54,14 @@ async function getAo3Feed() {
         link: ""
       }
       
-      const order = $(el).index()
+      const order = $(el).index();
       let id = $(el).attr("id");
       id = id.slice(5);
 
       workInfo.id = id;
       workInfo.link = `https://archiveofourown.org/works/${id}`;
 
-      //console.log(order, `https://archiveofourown.org/works/${id}`)
+      //console.log(order, `https://archiveofourown.org/works/${id}`);
 
       works.splice(order, 0, workInfo);
     });
